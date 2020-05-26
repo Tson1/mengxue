@@ -1,0 +1,8 @@
+User-agent: *
+#Allow: /
+Disallow: /nogooglebot/
+Disallow: /*.md$
+Sitemap: http://www.example.com/sitemap.xml
+
+
+#https://developers.google.com/search/reference/robots_txt
