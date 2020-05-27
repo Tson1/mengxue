@@ -1,0 +1,10 @@
+tmp="天下莫柔弱於水。";
+tmp.split('');
+//Array(8) [ "天", "下", "莫", "柔", "弱", "於", "水", "。" ]
+tmp.slice(4,tmp.length);
+//"弱於水。"
+
+
+var tmp2="tiān xià mò róu ruò yú shuǐ 。";
+tmp2.split(" ");
+Array(8) [ "tiān", "xià", "mò", "róu", "ruò", "yú", "shuǐ", "。" ]

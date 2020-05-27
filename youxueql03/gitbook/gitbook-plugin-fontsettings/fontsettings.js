@@ -85,11 +85,20 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         fontState.size--;
         saveFontSettings();
     }
-	// 
+	//
 	function pinying(){
-		$("rt").toggle();
-		console.log($("rt").is(':visible'));
-		fontState.pinYinShow=$("rt").is(':visible');
+		// $("rt").toggle();
+		// var isHiden=$("rt").hasClass('rthiden');
+	    var $book = gitbook.state.$book;
+	    var isHiden=$book.hasClass('rthiden');
+	    // if(isHiden){
+	    //   $("rt").removeClass('hiden');
+	    // }else{
+	  	// 	$("rt").addClass('hiden'); // removeClass，hasClass update
+	    // }
+		// console.log($("rt").is(':visible'));
+		// fontState.pinYinShow=$("rt").is(':visible');
+		fontState.pinYinShow=isHiden;
 		saveFontSettings();
 	}
     // Change font family
@@ -161,9 +170,11 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             $book.addClass('color-theme-'+fontState.theme);
         }
         if(fontState.pinYinShow){
-        	$("rt").show();
+        	// $("rt").show();
+        	$book.removeClass('rthiden');
         }else{
-        	$("rt").hide();
+        	// $("rt").hide();
+          	$book.addClass('rthiden'); // removeClass，hasClass update
         }
     }
 
@@ -179,11 +190,11 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             theme:  configTheme,
             pinYinShow:true
         });
-        if(fontState.pinYinShow){
-        	$("rt").show();
-        }else{
-        	$("rt").hide();
-        }
+        // if(fontState.pinYinShow){
+        // 	$("rt").show();
+        // }else{
+        // 	$("rt").hide();
+        // }
 
         update();
     }
@@ -258,5 +269,3 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         setFamilies:     setFamilies
     };
 });
-
-

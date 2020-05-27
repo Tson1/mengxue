@@ -289,3 +289,6 @@
   background: #252737;
   font-weight: 600;
 }
+.rthiden rt{
+  display: none;
+}
