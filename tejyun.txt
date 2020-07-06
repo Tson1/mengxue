@@ -1,0 +1,10 @@
+1. buildBook
+
+2. E:\work\git\techMemo\booksSiteMap
+
+3. E:\work\git\gitBook\mengxue\copyBook.bat
+				copyPlugin.bat
+4. E:\work\git\nodejsTech\HtmlAddAdio
+
+
+5. E:\work\git\gitBook\mengxue\gitCommit.bat
